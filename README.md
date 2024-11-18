@@ -1,5 +1,5 @@
-# EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
-
+# EXPERIMENT--06-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER
+Date:
 ### Aim:
 To generate a PWM wave at the timer pin output and  simuate it on  proteus using an virtual oscilloscope  
 
@@ -97,39 +97,54 @@ Step14. click on debug and simulate using simulation as shown below
 
 ## STM 32 CUBE PROGRAM :
 
+Developed by: Madhu Mitha V
 
+Reg No:2305002013
+
+STM 32 CUBE PROGRAM :
+
+MX_GPIO_Init();
+
+MX_TIM2_Init();
+
+{
+
+HAL_TIM_Base_Start(&htim2);
+
+HAL_TIM_PWM_Init(&htim2);
+
+HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+
+}
 
 
 
 ## Output screen shots of proteus  :
  
- 
+ ![image](https://github.com/user-attachments/assets/ddb8028c-1d5f-4b01-b5ac-0eab868bdaca)
+![image](https://github.com/user-attachments/assets/4c5b5f9c-2e54-4071-aa54-0d563c09552e)
+
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  
+![image](https://github.com/user-attachments/assets/274bfc13-4e61-45f0-9cec-88b056461da3)
+![image](https://github.com/user-attachments/assets/bddc98f0-be36-4e60-bb8c-fd03962599bf)
+![image](https://github.com/user-attachments/assets/db596ce8-ac58-4d3b-9202-db2d7cb775fc)
+![image](https://github.com/user-attachments/assets/1b222733-1150-4cc6-8b97-4e10ce15e80b)
+![image](https://github.com/user-attachments/assets/7d16e462-45c3-4b2a-8724-15b96fe97e2b)
+![image](https://github.com/user-attachments/assets/a21c2b22-7859-49c5-ba07-081026a18b27)
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
-FOR PULSE AT 500
+FOR PULSE AT 2700
 
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
+TON = 1.30.5=0.65 TOFF=2.20.1.1 TOTAL TIME = 1.75 FREQUENCY = 0.65/(1.75)*100=37%
 
-FOR PULSE AT 700
+FOR PULSE AT 4000
 
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
+TON = 20.5=1 TOFF=1.60.5=0.8 TOTAL TIME =1.8 FREQUENCY = 1/(1.8)*100=55%
 
+FOR PULSE AT 1700
 
-FOR PULSE AT 900
-
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
+TON =0.90.5=0.45 TOFF=2.90.5=1.45 TOTAL TIME =1.9 FREQUENCY = 0.45/(1.9)*100=23%
 
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated 
